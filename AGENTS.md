@@ -6,16 +6,14 @@
 # 1. Build locally
 npm run build
 
-# 2. Deploy from build directory
-cd build
-vercel deploy --prod --yes
+# 2. Deploy from project root (not build directory)
+vercel deploy --prod --yes --name=happiness-dashboard
 ```
 
 **Deploy with token:**
 
 ```bash
-cd build
-VERCEL_TOKEN=your_token vercel deploy --prod --yes
+VERCEL_TOKEN=your_token vercel deploy --prod --yes --name=happiness-dashboard
 ```
 
 ## Netlify Deploy
