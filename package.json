@@ -31,9 +31,10 @@
   "overrides": {
     "jsonwebtoken": "9.0.0",
     "trim@<0.0.3": ">0.0.3",
-    "sqlite3": "5.1.5"
+    "sqlite3": "5.1.5",
+    "duckdb": "^1.1.3"
   },
   "devDependencies": {
-    "duckdb": "^0.10.1"
+    "duckdb": "^1.1.3"
   }
 }
