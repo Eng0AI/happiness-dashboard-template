@@ -1,5 +1,5 @@
 ---
-name: build-deploy
+name: build-and-deploy
 description: Build and deploy this Evidence framework project. Use when building, deploying, or setting up the happiness dashboard project. Triggers on requests to build, deploy, publish, or prepare the project for production.
 ---
 
