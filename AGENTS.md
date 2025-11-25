@@ -1,3 +1,16 @@
+# Happiness Dashboard Template
+
+Build interactive data dashboards using Evidence framework - write SQL queries in markdown to create visualizations.
+
+## Tech Stack
+
+- Evidence
+- DuckDB
+- PostgreSQL
+- Svelte
+
+---
+
 # Evidence Deployment Guide
 
 ## Vercel Deploy
