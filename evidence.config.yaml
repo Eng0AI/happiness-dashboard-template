@@ -1,0 +1,10 @@
+# Evidence 40 configuration
+# https://docs.evidence.dev/
+
+plugins:
+  components:
+    "@evidence-dev/core-components": {}
+
+  datasources:
+    "@evidence-dev/csv": {}
+    "@evidence-dev/duckdb": {}

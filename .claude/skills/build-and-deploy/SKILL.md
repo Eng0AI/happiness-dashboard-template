@@ -22,16 +22,17 @@ No `.env` file setup required for Evidence projects.
 ### 1. Install Dependencies
 
 ```bash
-npm install
+pnpm install
 ```
 
 **Requirements:**
-- Node.js 18-20 (NOT 22+ due to DuckDB compatibility)
+- Node.js 18+ (pnpm with `shamefully-hoist=true` and duckdb override resolves compatibility)
+- pnpm 8+
 
 ### 2. Process Data Sources
 
 ```bash
-npm run sources
+pnpm run sources
 ```
 
 Processes CSV files from `sources/happiness_score/`:
@@ -41,7 +42,7 @@ Processes CSV files from `sources/happiness_score/`:
 ### 3. Build
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 Generates static site in `build/` directory.
@@ -66,8 +67,9 @@ netlify deploy --prod --dir=build
 
 ## Critical Notes
 
-- **Node Version:** Must use Node.js 18-20 (version 22+ has DuckDB compatibility issues)
+- **Package Manager:** Use pnpm (not npm). The `.npmrc` has `shamefully-hoist=true` for Evidence compatibility
+- **Node Version:** Node.js 18+ works with pnpm overrides for duckdb
 - **Build Locally:** Always build locally before deploying (Vercel/Netlify build can timeout due to DuckDB compilation taking 40+ minutes)
 - **Deploy Location:** Run deploy command from project root, not build directory
 - **No Database:** Uses CSV files, no database setup needed
-- **No Dev Server:** Never run `npm run dev` in VM environment
+- **No Dev Server:** Never run `pnpm run dev` in VM environment
