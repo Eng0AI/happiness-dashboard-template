@@ -5,10 +5,6 @@ description: Build and deploy this Evidence framework project. Use when building
 
 # Build and Deploy Happiness Dashboard
 
-## Overview
-
-Build and deploy the happiness dashboard Evidence project. This Evidence framework project processes CSV data sources and generates a static data visualization site.
-
 ## Environment
 
 All required environment variables are pre-configured in CCVM and available directly:
