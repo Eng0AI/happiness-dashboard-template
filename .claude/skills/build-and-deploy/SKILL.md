@@ -51,7 +51,11 @@ Generates static site in `build/` directory.
 
 **Vercel:**
 ```bash
-vercel deploy --prod --yes
+# Build locally for production
+vercel build --prod
+
+# Deploy prebuilt (bypasses Git author permission issues)
+vercel deploy --prebuilt --prod --yes
 ```
 
 **Important:** Deploy from project root, not `build/` directory.
