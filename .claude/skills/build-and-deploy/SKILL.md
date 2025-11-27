@@ -46,12 +46,18 @@ Generates static site in `build/` directory.
 ### 4. Deploy
 
 **Vercel:**
-```bash
-# Build locally for production
-vercel build --prod
 
-# Deploy prebuilt (bypasses Git author permission issues)
-vercel deploy --prebuilt --prod --yes
+All vercel CLI commands require `-t <token>` or `--token <token>` for authentication.
+
+```bash
+# Pull project settings (also links project, creates .vercel/project.json)
+vercel pull --yes -t $VERCEL_TOKEN
+
+# Build locally for production
+vercel build --prod -t $VERCEL_TOKEN
+
+# Deploy prebuilt
+vercel deploy --prebuilt --prod --yes -t $VERCEL_TOKEN
 ```
 
 **Important:** Deploy from project root, not `build/` directory.
